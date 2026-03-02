@@ -20,3 +20,4 @@ class UserManager:
     def count_total_users(self):
         temp = 0
         return len(self.users)
+    """    Fonction pour compter le nombre total d'utilisateurs, y compris les utilisateurs supprimés."""
