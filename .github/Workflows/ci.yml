@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Recuperer le code
-        uses: actions/checkout
+        uses: actions/checkout@v4
       
       - name: Installer Python
-        uses: actions/setup-python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
       
@@ -28,7 +28,7 @@ jobs:
           flake8 tests --count --max-line-length=127 --statistics
       
       - name: Lancer les tests
-        run: pytest -v --cov=app
+        run: python -m pytest -v --cov=app
 
         
 
